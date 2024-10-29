@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6e6; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #c70039; /* Darker red for emphasis */
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.no-btn {
+    background-color: #ff4d4d; /* Red */
+    color: white;
+}
+
+.yes-btn {
+    background-color: #4dff4d; /* Green */
+    color: white;
+}
+
+.response {
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.photo-upload {
+    margin: 20px 0;
+}
+
+.upload-label {
+    background-color: #ff69b4; /* Hot pink */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo-card {
+    position: relative;
+    margin: 10px;
+    border: 2px solid #c70039; /* Border color */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+.photo-card:hover .delete-icon {
+    display: block; /* Show on hover */
+}
+/* Photo Gallery Styling */
+.upload-label {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff4b5c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #ff6f81;
+}
+
+/* Photo Card Styling */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo-card {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+.photo-card:hover {
+    transform: scale(1.1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 192, 203, 0.4);
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.photo-card:hover:before {
+    opacity: 1;
+}
+
